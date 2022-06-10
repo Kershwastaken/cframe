@@ -1,0 +1,17 @@
+local plr = game:GetService("Players").LocalPlayer
+
+local char = plr.Character
+local rs = game:GetService("RunService")
+
+
+while wait() do
+    if not shared.USE_CF_INSTEAD == true then return end
+    local hum = char:FindFirstChild("Humanoid")
+    if hum then
+        if hum.MoveDirection.Magnitude == 0 then
+            
+        else
+            char.HumanoidRootPart.CFrame = char.HumanoidRootPart.CFrame + char.HumanoidRootPart.CFrame.lookVector / 2
+        end
+     end
+end
